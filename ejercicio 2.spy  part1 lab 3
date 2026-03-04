@@ -1,0 +1,20 @@
+# Lectura del tipo de membresía desde el teclado
+# Usamos .lower() para que funcione aunque el usuario escriba en mayúsculas
+membresia = input("Ingrese el tipo de membresía (estudiante, adulto, familiar, premium): ").lower()
+
+# Estructura encadenada para determinar el precio
+if membresia == "estudiante":
+    print("La cuota mensual a pagar es: Q150.00")
+
+elif membresia == "adulto":
+    print("La cuota mensual a pagar es: Q250.00")
+
+elif membresia == "familiar":
+    print("La cuota mensual a pagar es: Q400.00")
+
+elif membresia == "premium":
+    print("La cuota mensual a pagar es: Q600.00")
+
+else:
+    # Mensaje de error si no coincide con ninguna de las opciones anteriores
+    print("Error: El tipo de membresía no es válido.")
