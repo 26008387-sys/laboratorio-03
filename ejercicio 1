@@ -1,0 +1,24 @@
+import math
+radio = float(input("Ingrese el radio del frasco (cm): "))
+altura = float(input("Ingrese la altura del frasco (cm): "))
+if radio > 0 and altura > 0:    
+                                                                                       # Cálculo del volumen (Fórmula: π * r² * h)
+    volumen = math.pi * (radio ** 2) * altura
+    # 1 Litro = 1000 cm3, por lo tanto 250 ml = 250 cm3
+    if volumen >= 250:
+        print("El frasco cumple con el requisito.")        
+                                                                                   # Cálculo de dimensiones para la caja de 20 frascos
+        diametro = radio * 2
+        ancho_caja = diametro * 4
+        largo_caja = diametro * 5
+        alto_caja = altura
+        print(f"Dimensiones de la caja rectangular para 20 frascos:")
+        print(f"- Ancho: {ancho_caja:.2f} cm")
+        print(f"- Largo: {largo_caja:.2f} cm")
+        print(f"- Alto: {alto_caja:.2f} cm")
+        
+    else:
+        print("Frasco no cumple con los requisitos.")
+
+else:
+    print("Valores no válidos")
